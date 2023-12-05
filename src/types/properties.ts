@@ -8,6 +8,6 @@ export interface Property {
   address: string;
   salePrice: number;
   rentPrice: number;
-  status: "vendida" | "rentada";
+  status: "VENDIDA" | "RENTADA" | "DISPONIBLE";
   m2: number;
 }

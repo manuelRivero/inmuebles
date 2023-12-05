@@ -6,7 +6,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"DISPONIBLE",
     m2: 200,
     media: [
       {
@@ -24,7 +24,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"DISPONIBLE",
     m2: 200,
     media: [
       {
@@ -42,7 +42,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"RENTADA",
     m2: 200,
     media: [
       {
@@ -60,7 +60,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -78,7 +78,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -96,7 +96,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -114,7 +114,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -132,7 +132,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -150,7 +150,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -168,7 +168,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -186,7 +186,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -204,7 +204,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -222,7 +222,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -240,7 +240,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -258,7 +258,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -276,7 +276,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -294,7 +294,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -312,7 +312,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -330,7 +330,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
@@ -348,7 +348,7 @@ export const data: Property[] = [
     address: " dirección de prueba 123",
     salePrice: 2000,
     rentPrice: 50,
-    status:"vendida",
+    status:"VENDIDA",
     m2: 200,
     media: [
       {
