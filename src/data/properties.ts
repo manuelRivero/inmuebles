@@ -15,7 +15,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -51,7 +51,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -69,7 +69,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -105,7 +105,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -123,7 +123,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -141,7 +141,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -159,7 +159,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -177,7 +177,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -195,7 +195,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -213,7 +213,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -231,7 +231,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -249,7 +249,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -267,7 +267,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -285,7 +285,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -303,7 +303,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -321,7 +321,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -339,7 +339,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -357,7 +357,7 @@ export const data: Property[] = [
       },
       {
         type: "video",
-        src: "https://www.youtube.com/watch?v=YHjmc4xA2H8",
+        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
