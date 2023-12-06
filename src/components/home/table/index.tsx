@@ -56,6 +56,7 @@ const getColumns = (
         const { status, id } = row;
         if (status === "DISPONIBLE") {
           const updateStatus = (newStatus: string) => {
+            console.log("click");
             dispatch(changePropertyStatus({ id, status: newStatus }));
           };
           return (
@@ -117,18 +118,32 @@ export default function DataTable() {
   const navigate = useNavigate();
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
+  const [showUpdateConfirm, setShowUpdateConfirm] = useState<boolean>(false);
 
   const { properties: data } = useAppSelector(
     (state: RootState) => state.properties
   );
   return (
     <div style={{ height: 400, width: "100%" }}>
+         <SweetAlert2
+        show={showDeleteConfirm}
+        icon="question"
+        title="¿Deseas cambiar el estatus de este inmueble?"
+        onConfirm={() => {
+          dispatch(deleteProperty({ id: selectedRow }));
+          setSelectedRow(null);
+        }}
+        onResolve={() => setShowDeleteConfirm(false)}
+      />
       <SweetAlert2
         show={showDeleteConfirm}
         icon="question"
         title="¿Deseas eliminar este inmueble?"
-        onConfirm={() =>{ dispatch(deleteProperty({ id: selectedRow })); setSelectedRow(null)}}
-        onResolve={()=> setShowDeleteConfirm(false)}
+        onConfirm={() => {
+          dispatch(deleteProperty({ id: selectedRow }));
+          setSelectedRow(null);
+        }}
+        onResolve={() => setShowDeleteConfirm(false)}
       />
       <DataGrid
         disableRowSelectionOnClick

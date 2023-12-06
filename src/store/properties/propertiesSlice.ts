@@ -16,7 +16,7 @@ const slice = createSlice({
       const targetIndex = state.properties.findIndex((e) => {
         return e.id === action.payload.id;
       });
-      if (targetIndex > 0) {
+      if (targetIndex >= 0) {
         state.properties[targetIndex] = {
           ...state.properties[targetIndex],
           ...action.payload.values,
@@ -30,7 +30,7 @@ const slice = createSlice({
     },
     changePropertyStatus: (state, action) => {
       const targetIndex = state.properties.findIndex((e) => e.id === action.payload.id);
-      if (targetIndex > 0) {
+      if (targetIndex >= 0) {
         state.properties[targetIndex].status = action.payload.status;
       }
     }
