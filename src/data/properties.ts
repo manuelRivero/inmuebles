@@ -11,11 +11,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -29,11 +29,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -47,11 +47,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -65,11 +65,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -83,11 +83,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -101,11 +101,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -119,11 +119,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -137,11 +137,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -155,11 +155,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -173,11 +173,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -191,11 +191,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -209,11 +209,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -227,11 +227,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -245,11 +245,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -263,11 +263,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -281,11 +281,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -299,11 +299,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -317,11 +317,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -335,11 +335,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },
@@ -353,11 +353,11 @@ export const data: Property[] = [
     media: [
       {
         type: "image",
-        src: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
+        source: "https://definicion.de/wp-content/uploads/2010/12/casa.jpg",
       },
       {
         type: "video",
-        src: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
+        source: "YHjmc4xA2H8?si=ecYQjGW-f-MehBTA",
       },
     ],
   },

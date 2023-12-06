@@ -6,7 +6,6 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 interface Props {
   label: string;
-  outline?: boolean;
   outlineColor?: string;
   multiline?: boolean;
   type: "text" | "password";
@@ -15,7 +14,7 @@ interface Props {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   value: string;
-  error: FieldError | undefined;
+  error?: FieldError | undefined;
   placeholder: string;
   maxLength?: number | null;
   // lengthAlert?: {length:number, message:string} | null
@@ -25,8 +24,6 @@ interface Props {
 }
 export default function CustomInput({
   label,
-  outline = false,
-  outlineColor,
   multiline = false,
   rows = 1,
   value,
@@ -37,7 +34,7 @@ export default function CustomInput({
   maxLength = null,
   lengthAlertHandler,
   hasLabel = true,
-  disabled = false
+  disabled = false,
 }: // lengthAlert = null
 Props) {
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
@@ -98,13 +95,7 @@ Props) {
             fontSize: 16,
             width: "100%",
             padding: "10px 12px",
-            border: outline
-              ? `1px solid ${
-                  outlineColor
-                    ? outlineColor
-                    : alpha(theme.palette.primary.main, 0.25)
-                }`
-              : "",
+            border: `1px solid ${ alpha(theme.palette.primary.main, 0.25)}`,
             transition: theme.transitions.create([
               "border-color",
               "background-color",

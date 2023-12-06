@@ -20,7 +20,9 @@ const getColumns = (
   dispatch: Dispatch<UnknownAction>,
   navigate: NavigateFunction,
   showDeleteConfirm: React.Dispatch<React.SetStateAction<boolean>>,
-  setSelectedRow: React.Dispatch<React.SetStateAction<number | null>>
+  setSelectedRow: React.Dispatch<React.SetStateAction<number | null>>,
+  setShowUpdateConfirm: React.Dispatch<React.SetStateAction<boolean>>,
+  setStatus: React.Dispatch<React.SetStateAction<"VENDIDA" | "RENTADA" | null>>
 ): GridColDef[] => {
   return [
     { field: "id", headerName: "ID" },
@@ -55,9 +57,10 @@ const getColumns = (
       renderCell: ({ row }) => {
         const { status, id } = row;
         if (status === "DISPONIBLE") {
-          const updateStatus = (newStatus: string) => {
-            console.log("click");
-            dispatch(changePropertyStatus({ id, status: newStatus }));
+          const updateStatus = (newStatus: "VENDIDA" | "RENTADA" | null) => {
+            setStatus(newStatus);
+            setShowUpdateConfirm(true);
+            setSelectedRow(id);
           };
           return (
             <Stack direction="row" spacing={2}>
@@ -119,21 +122,42 @@ export default function DataTable() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<boolean>(false);
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
   const [showUpdateConfirm, setShowUpdateConfirm] = useState<boolean>(false);
+  const [status, setStatus] = useState<"VENDIDA" | "RENTADA" | null>(null);
 
   const { properties: data } = useAppSelector(
     (state: RootState) => state.properties
   );
   return (
     <div style={{ height: 400, width: "100%" }}>
-         <SweetAlert2
-        show={showDeleteConfirm}
+      <DataGrid
+        sx={{ marginTop: "2rem" }}
+        disableRowSelectionOnClick
+        rowSelection={false}
+        rows={data}
+        columns={getColumns(
+          dispatch,
+          navigate,
+          setShowDeleteConfirm,
+          setSelectedRow,
+          setShowUpdateConfirm,
+          setStatus
+        )}
+        initialState={{
+          pagination: {
+            paginationModel: { page: 0, pageSize: 8 },
+          },
+        }}
+        pageSizeOptions={[5, 10]}
+      />
+      <SweetAlert2
+        show={showUpdateConfirm}
         icon="question"
         title="¿Deseas cambiar el estatus de este inmueble?"
         onConfirm={() => {
-          dispatch(deleteProperty({ id: selectedRow }));
+          dispatch(changePropertyStatus({ id: selectedRow, status }));
           setSelectedRow(null);
         }}
-        onResolve={() => setShowDeleteConfirm(false)}
+        onResolve={() => setShowUpdateConfirm(false)}
       />
       <SweetAlert2
         show={showDeleteConfirm}
@@ -144,23 +168,6 @@ export default function DataTable() {
           setSelectedRow(null);
         }}
         onResolve={() => setShowDeleteConfirm(false)}
-      />
-      <DataGrid
-        disableRowSelectionOnClick
-        rowSelection={false}
-        rows={data}
-        columns={getColumns(
-          dispatch,
-          navigate,
-          setShowDeleteConfirm,
-          setSelectedRow
-        )}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 8 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
       />
     </div>
   );

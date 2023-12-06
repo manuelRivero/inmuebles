@@ -9,36 +9,55 @@ import {
   Stack,
   colors,
   Button,
+  Modal,
+  InputLabel,
 } from "@mui/material";
 import { RootState, useAppDispatch, useAppSelector } from "../store/store";
 import Grid from "@mui/material/Grid";
 import CustomInput from "../components/shared/customInput";
-import { useForm, Controller, useFieldArray } from "react-hook-form";
+import {
+  useForm,
+  Controller,
+  useFieldArray,
+  FieldValues,
+} from "react-hook-form";
 import CloseIcon from "@mui/icons-material/Close";
 import { theme } from "../theme";
 import { updateProperty } from "../store/properties/propertiesSlice";
+import ImageModal from "../components/shared/imageModal";
+import VideoModal from "../components/shared/videoModal";
+
+const style = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 4,
+  textAlign: "center",
+};
 
 export default function Detail() {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const dispatch = useAppDispatch();
   const { properties: data } = useAppSelector(
     (state: RootState) => state.properties
   );
+
+  const { handleSubmit, reset, control } = useForm();
+
+  const { fields, append, remove } = useFieldArray<any>({
+    control, // control props comes from useForm (optional: if you are using FormContext)
+    name: "media", // unique name for your Field Array
+  });
+
   const [targetProperty, setTargetProperty] = useState<Property | null>(null);
-  const navigate = useNavigate()
-
-  const {
-    handleSubmit,
-    reset,
-    control,
-  } = useForm();
-
-  const { fields, append, remove} = useFieldArray(
-    {
-      control, // control props comes from useForm (optional: if you are using FormContext)
-      name: "media", // unique name for your Field Array
-    }
-  );
+  const [showImageModal, setShowImageModal] = useState<boolean>(false);
+  const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
 
   useEffect(() => {
     if (id) {
@@ -53,7 +72,7 @@ export default function Detail() {
           m2: target.m2,
         });
         target.media.forEach((item) => {
-          append({ source: item.src, type: item.type });
+          append({ source: item.source, type: item.type });
         });
       } else {
         // redirect 404
@@ -77,12 +96,16 @@ export default function Detail() {
     );
   }
 
-  const submit = (values) => {
-    dispatch(updateProperty({ id, values }))
-    navigate("/")
-  }
+  const submit = (values: any) => {
+    dispatch(updateProperty({ id, values }));
+    console.log("Values", values);
+    navigate("/");
+  };
+
   return (
-    <Container sx={(theme) => ({ marginTop: theme.spacing(4) })}>
+    <Container
+      sx={(theme) => ({ marginTop: theme.spacing(4), paddingBottom: "100px" })}
+    >
       <Typography align="center" variant="h3" component="h3">
         Edición del inmueble
       </Typography>
@@ -95,6 +118,7 @@ export default function Detail() {
           >
             <Grid item xs={12} md={6}>
               <Controller
+                rules={{ required: "Campo requerido" }}
                 name="address"
                 control={control}
                 render={({ field, fieldState }) => {
@@ -117,6 +141,7 @@ export default function Detail() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Controller
+                rules={{ required: "Campo requerido" }}
                 name="salePrice"
                 control={control}
                 render={({ field, fieldState }) => {
@@ -139,6 +164,7 @@ export default function Detail() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Controller
+                rules={{ required: "Campo requerido" }}
                 name="rentPrice"
                 control={control}
                 render={({ field, fieldState }) => {
@@ -161,6 +187,7 @@ export default function Detail() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Controller
+                rules={{ required: "Campo requerido" }}
                 name="status"
                 control={control}
                 render={({ field, fieldState }) => {
@@ -184,6 +211,7 @@ export default function Detail() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Controller
+                rules={{ required: "Campo requerido" }}
                 name="m2"
                 control={control}
                 render={({ field, fieldState }) => {
@@ -206,61 +234,132 @@ export default function Detail() {
             </Grid>
           </Grid>
         </Stack>
-        <Typography align="center" variant="h3" component="h3">
+        <Typography
+          align="center"
+          variant="h3"
+          sx={{ marginTop: theme.spacing(4) }}
+          component="h3"
+        >
           Multimedia de la propiedad
         </Typography>
         <Stack direction={"row"} justifyContent="center">
           <Grid
             container
-            spacing={2}
-            sx={(theme) => ({ marginTop: theme.spacing(4), maxWidth: "600px" })}
+            spacing={4}
+            sx={(theme) => ({ marginTop: theme.spacing(2), maxWidth: "600px" })}
             justifyContent={"center"}
           >
-            {fields.map((item, index) => (
-              <Grid item md={4}>
-                <Box sx={(theme) => ({ position: "relative" })}>
-                  {targetProperty.media[index].type === "image" ? (
-                    <img
-                      src={`${targetProperty.media[index].src}`}
-                      style={{ width: "100%" }}
-                    />
-                  ) : (
-                    <iframe
-                      width="100%"
-                      src={`https://www.youtube.com/embed/${targetProperty.media[index].src}`}
-                      style={{ width: "100%" }}
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    ></iframe>
-                  )}
-
+            {fields.map((item: any, index) => {
+              const { source, type } = item;
+              return (
+                <Grid item md={4}>
                   <Box
-                    sx={(theme) => ({
-                      position: "absolute",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      top: "5px",
-                      right: "5px",
-                      backgroundColor: theme.palette.error.main,
-                      borderRadius: "9999px",
-                      padding: "5px",
-                      cursor: "pointer",
-                    })}
-                    onClick={() => {
-                      remove(index);
-                    }}
+                    sx={(theme) => ({ position: "relative", height: "100%" })}
                   >
-                    <CloseIcon style={{ color: "white" }} />
+                    {type === "image" ? (
+                      <img
+                        src={`${source}`}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    ) : (
+                      <iframe
+                        id="yt-video-iframe"
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${source}`}
+                        style={{ width: "100%" }}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      ></iframe>
+                    )}
+
+                    <Box
+                      sx={(theme) => ({
+                        position: "absolute",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        top: "5px",
+                        right: "5px",
+                        backgroundColor: theme.palette.error.main,
+                        borderRadius: "9999px",
+                        padding: "5px",
+                        cursor: "pointer",
+                      })}
+                      onClick={() => {
+                        remove(index);
+                      }}
+                    >
+                      <CloseIcon style={{ color: "white" }} />
+                    </Box>
                   </Box>
-                </Box>
-              </Grid>
-            ))}
+                </Grid>
+              );
+            })}
+
+            <Grid item md={4}>
+              <Box
+                sx={{
+                  height: "100%",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Stack
+                  direction="column"
+                  spacing={2}
+                  justifyContent="center"
+                  alignItems="center"
+                  sx={{ marginTop: "15px" }}
+                >
+                  <Typography>Agregar nueva</Typography>
+                  <Button
+                    variant="outlined"
+                    sx={{ border: "1px solid #c2c2c2", borderRadius: "5px" }}
+                    onClick={() => setShowImageModal(true)}
+                  >
+                    Imagen
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    sx={{ border: "1px solid #c2c2c2", borderRadius: "5px" }}
+                    onClick={() => setShowVideoModal(true)}
+                  >
+                    Video
+                  </Button>
+                </Stack>
+              </Box>
+            </Grid>
           </Grid>
         </Stack>
-        <Stack direction={"row"} justifyContent="center">
-          <Button title="Guardar" type="submit">Guardar</Button>
+        <Stack
+          spacing={2}
+          sx={{ marginTop: "20px" }}
+          direction={"row"}
+          justifyContent="center"
+        >
+          <Button variant="outlined" color="info" onClick={() => navigate("/")}>
+            Cancelar
+          </Button>
+          <Button variant="contained" type="submit">
+            Guardar
+          </Button>
         </Stack>
       </form>
+
+      <ImageModal
+        open={showImageModal}
+        onClose={() => setShowImageModal(false)}
+        append={append}
+      />
+      <VideoModal
+        open={showVideoModal}
+        onClose={() => setShowVideoModal(false)}
+        append={append}
+      />
     </Container>
   );
 }

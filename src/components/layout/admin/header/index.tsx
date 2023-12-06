@@ -2,7 +2,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 export default function Header() {
   return (
@@ -15,8 +15,7 @@ export default function Header() {
             alignItems={"center"}
             justifyContent={"space-between"}
           >
-            <Box>Aplicación de inmubles</Box>
-            <Button color="inherit">Login</Button>
+            <Box><Typography variant="body1">Aplicación de inmubles</Typography> </Box>
           </Stack>
         </Toolbar>
       </AppBar>

@@ -1,5 +1,5 @@
 export interface Media {
-  src: string;
+  source: string;
   type: "image" | "video";
 }
 export interface Property {
