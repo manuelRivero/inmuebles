@@ -1,0 +1,3 @@
+Instrucciones:
+*npm install para instalar las dependencias
+*npm run dev para levantar el proyecto
